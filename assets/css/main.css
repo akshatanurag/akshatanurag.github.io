@@ -2171,6 +2171,23 @@ p {
   padding-bottom: 225px;
 }
 
-.client-img img {
+/* .clients-section img {
   filter: grayscale(100%);
+} */
+
+.clients-section {
+  padding: 100px 0;
+  background: rgba(88, 100, 255, 0.1);
+}
+
+.clients-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-slider .swiper-slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

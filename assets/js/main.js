@@ -95,33 +95,68 @@
   // WOW active
   new WOW().init();
 })();
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
+
+// Initialize Hero Section Swiper
+  const heroSwiper = new Swiper('.hero-swiper', {
   direction: 'horizontal',
   loop: true,
-
-  // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: '.hero-swiper-pagination',
     clickable: true,
   },
-
   autoplay: {
     delay: 10000, // Autoplay delay in milliseconds
     disableOnInteraction: true, // Disable autoplay when user interacts with the slider
   },
+  // navigation: {
+  //   nextEl: '.hero-swiper-button-next',
+  //   prevEl: '.hero-swiper-button-prev',
+  // },
+  // scrollbar: {
+  //   el: '.hero-swiper-scrollbar',
+  // },
+});
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+// Initialize Clients Section Swiper
+const clientsSwiper = new Swiper('.clients-slider', {
+  loop: true,
+  autoplay: {
+    delay: 3000, // 3 seconds delay between slides
+    disableOnInteraction: false,
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
+  // pagination: {
+  //   el: '.clients-swiper-pagination',
+  //   clickable: true,
+  // },
+  // navigation: {
+  //   nextEl: '.clients-swiper-button-next',
+  //   prevEl: '.clients-swiper-button-prev',
+  // },
+  // scrollbar: {
+  //   el: '.clients-swiper-scrollbar',
+  // },
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
   },
 });
+
 
 
 
