@@ -3,6 +3,7 @@
 
   window.onload = function () {
     window.setTimeout(fadeout, 500);
+    setFooterDate();
   };
 
   function fadeout() {
@@ -156,6 +157,15 @@ const clientsSwiper = new Swiper('.clients-slider', {
     },
   },
 });
+
+
+const setFooterDate = ()=>{
+  var currentDate = new Date();
+  var currentYear = currentDate.getFullYear();
+  var copyrightText = "Copyright © " + currentYear + " CNB. All rights reserved.";
+  document.querySelector('.copyrights').innerHTML = copyrightText;
+  
+}
 
 
 
